@@ -78,7 +78,13 @@ class LoginPage extends StatelessWidget {
             onPressed: () {
               print("Google Is Clicked");
             },
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(50)))),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/images/google1.png',
@@ -89,16 +95,28 @@ class LoginPage extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            width: 8,
+          ),
           ElevatedButton(
             onPressed: () {
               print("Facebook Is Clicked");
             },
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(50)))),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   'assets/images/facebook.png',
                   width: 22,
                   height: 22,
+                ),
+                SizedBox(
+                  width: 8,
                 ),
                 Text(" Login With Facebook")
               ],
@@ -106,8 +124,17 @@ class LoginPage extends StatelessWidget {
           ),
           Row(
             children: [
-              Text("Don't Have Account? "),
-              TextButton(onPressed: () {}, child: Text("Sign Up"))
+              Text(
+                "Don't Have Account? ",
+                style: TextStyle(color: Colors.white),
+              ),
+              TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(foregroundColor: Colors.amber),
+                  child: Text(
+                    "Sign Up",
+                    style: TextStyle(decoration: TextDecoration.underline),
+                  ))
             ],
           )
         ],
